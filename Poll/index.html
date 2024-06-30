@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Poll System</h1>
+        <div class="poll">
+            <h2>What is your favourite Programming Language?</h2>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" id="opt1" name="poll" value="opt1">
+                    <label for="opt1">JavaScript</label>
+                    <input type="radio" id="opt2" name="poll" value="opt2">
+                    <label for="opt2">C/C++</label>
+                    <input type="radio" id="opt3" name="poll" value="opt3">
+                    <label for="opt3">Java</label>
+                    <input type="radio" id="opt4" name="poll" value="opt4">
+                    <label for="opt4">Python</label>
+                </div>
+            </div>
+            <button onclick="submitvote()">Submit Vote</button>
+            <div class="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
