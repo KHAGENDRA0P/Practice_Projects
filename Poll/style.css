@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(117, 59, 174);
+    font-family:'Lucida Sans', Verdana;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: card 1s ease-in-out;
+}
+@keyframes card {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+h1{
+    color: rgba(128, 0, 128, 0.861);
+    font-size: 32px;
+    opacity: 1;
+}
+.poll{
+    margin-top: 20px;
+}
+h2{
+    color: rgba(168, 47, 168, 0.868);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option{
+    margin-bottom: 10px;
+    color: black;
+}
+/* .option:hover{
+    background-color: #fff;
+} */
+input[type="radio"]{
+    display: none;;
+}
+label{
+    display: inline-block;
+    background-color: rgb(145, 70, 221);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.option input[type="radio"]:checked + label{
+    background-color: darkmagenta;
+    color: rgb(225, 225, 225);
+}
+button{
+    font-size: larger;
+    background-color: darkmagenta;
+    color: lightgray;
+    padding: 10px 200px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: rgb(153, 0, 153);
+}
