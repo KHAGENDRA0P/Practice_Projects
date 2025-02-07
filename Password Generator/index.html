@@ -15,22 +15,27 @@
             <span class="material-symbols-outlined" id="copyIcon">content_copy</span>
         </div>
         <div class="pass-indicator" id="passIndicator">
-
         </div>
+
         <input type="range" min="1" max="20" value="6" step="1" id="inputSlider">
         <div class="row">
             <p>Password Length</p>
-            <span id="sliderValue"></span>
+            <span id="sliderValue">500</span>
+        </div>
+        <div class="row">
             <label for="lowercase">Include LowerCase Letters (a-z)</label>
             <input type="checkbox" name="lowercase" id="lowercase" checked>
-            <br/>
+        </div>
+        <div class="row">
             <label for="uppercase">Include UpperCase Letters (A-Z)</label>
             <input type="checkbox" name="uppercase" id="uppercase" checked>
-            <br>
-            <label for="number">Include Numbers (0-9)</label>
+        </div>
+            <div class="row">    
+            <label for="numbers">Include Numbers (0-9)</label>
             <input type="checkbox" name="numbers" id="numbers" checked>
-            <br>
-            <label for="symbols">Include Special Symbols (@-*)</label>
+        </div>
+        <div class="row">
+            <label for="symbols">Include Special Symbols (! - *)</label>
             <input type="checkbox" name="symbols" id="symbols" >
         </div>
         <button class="getBtn" id="getBtn">Generate Password</button>
