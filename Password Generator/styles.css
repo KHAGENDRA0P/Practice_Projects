@@ -114,7 +114,7 @@ input[type="range"]{
     width: 20%;
     background-color: #e64a4a;
 }
-.pass-indicator.med::before{
+.pass-indicator.medium::before{
     width: 50%;
     background-color: #f1c80b;
 }
