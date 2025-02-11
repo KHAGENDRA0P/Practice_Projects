@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function cashCalc(index) { 
         const denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
         const rowValue = inputs[index].value * denominations[index]; //5*200=1000
-        texts[index].textContent = rowValue.toFixed(0);
+        texts[index].textContent = rowValue;//.tofixed(0)
         totalAmount();
     }
     function totalAmount() {
@@ -46,17 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
             totalAmount += parseInt(text.textContent);
         });
         totalAmt.textContent = "Total Amount: " + totalAmount;
-        totalAmtinWords.textContent = `otal Amount in Words: ${convertWords(totalAmount)}`;
+        totalAmtinWords.textContent = `Total Amount in Words: ${convertWords(totalAmount)}`;
     }
 
     btnReset.addEventListener("click", clear);
     function clear() { 
         inputs.forEach((input) => {
             input.value = "";
-            texts.forEach((text) => {
-                text.textContent = "";
-            });
         });
+        texts.forEach((text) => {
+            text.textContent = "0";
+        });
+        totalAmount();
     }
     inputs.forEach(input => {
         input.addEventListener("input", () => {
@@ -77,10 +78,39 @@ document.addEventListener("DOMContentLoaded", () => {
             return 'Zero';
 
         let words = '';
-
+        
+        if (number >= 100000) {
+            words += convertWords(Math.floor(number / 100000)) + ' Lakh ';
+            number %= 100000;
+        }
+        
         if (number >= 1000) {
-            words += convertWords(Math.floor(number / 1000)) +'Thousand ';
+            words += convertWords(Math.floor(number / 1000)) +' Thousand ';
             number %= 1000;
-        }   
+        }
+
+        if (number > 99) {
+            words += convertWords(Math.floor(number / 100)) +' Hundred '; // 250 = 200 50 -> two hundred fifty
+            number %= 100;
+        }
+
+        if (number > 0) {
+            if (number < 10) {
+                words += units[number]; //units[5]
+            }
+            else if (number < 20) {
+                words += teens[number - 10]; // 15-10=5 = teens[5]
+            }
+            else {
+                words += tens[Math.floor(number / 10)]; // 25 = 20 5 -> twenty five
+                if (number % 10 > 0) {
+                    words += ' '+ units[number % 10]; // units[5]
+                }
+                
+            }
+            
+        }
+        
+        return words.trim();
     }
 });
