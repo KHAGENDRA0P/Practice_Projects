@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica  ;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.colorBox{
+    background-color: aqua;
+    width: 150px;   
+    height: 150px;  
+    color: aliceblue;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border: solid black 2px;
+    border-radius: 5px;
+}
+button{
+    background-color: pink;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: lightpink;
+}
