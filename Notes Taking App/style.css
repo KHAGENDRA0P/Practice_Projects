@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #ccbdf9, #ffccf2);
+    /* background-color: #ffccf2; */
+}
+#main{
+    min-width: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+#btn{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    background-color: #a77bca;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover{
+    background-color: #9059c9;
+}
+h1{
+    text-align: center;
+}
+.note{
+    background-color: transparent;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.title{
+    background-color: darkslategray;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.title i{
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.title i:hover{
+    color: lightgrey;
+}
+.note textarea{
+    width: 300px;
+    min-height: 200px;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: slategrey;
+    color: lightcyan;
+    border-radius: 0px 0px 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.note textarea:hover{
+    background-color: #6B7C93;
+}
+.note textarea:focus{
+    outline: none;
+}
